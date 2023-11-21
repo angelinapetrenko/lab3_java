@@ -22,10 +22,17 @@ public class Main {
             long removeArrayListTime = new TimeTester().removeList(arrayList, sizes[i]);
             long removeLinkedListTime = new TimeTester().removeList(linkedList, sizes[i]);
 
+            long containsArrayListTime = new TimeTester().containsList(arrayList, sizes[i]);
+            long containsLinkedListTime = new TimeTester().containsList(linkedList, sizes[i]);
+
+            long indexOfArrayListTime = new TimeTester().indexOfList(arrayList, sizes[i]);
+            long indexOfLinkedListTime = new TimeTester().indexOfList(linkedList, sizes[i]);
 
             System.out.format("| Add     |  %d   |   %d ms   |    %d ms    |%n", sizes[i], addArrayListTime, addLinkedListTime);
             System.out.format("| Get     |  %d   |   %d ms   |    %d ms    |%n", sizes[i], getArrayListTime, getLinkedListTime);
             System.out.format("| Remove  |  %d   |   %d ms   |    %d ms    |%n", sizes[i], removeArrayListTime, removeLinkedListTime);
+            System.out.format("| Contains|  %d   |   %d ms   |    %d ms    |%n", sizes[i], containsArrayListTime, containsLinkedListTime);
+            System.out.format("| IndexOf |  %d   |   %d ms   |    %d ms    |%n", sizes[i], indexOfArrayListTime, containsLinkedListTime);
             System.out.println("------------------------------------------------");
         }
     }
